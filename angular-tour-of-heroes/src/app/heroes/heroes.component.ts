@@ -11,9 +11,11 @@ export class HeroesComponent {
   //set new value from mock data
   heroes = HEROES;
 
-  //set empty object for instead of selected value  
+  //set empty object for instead of selected value
+  //Initialize = undefined  
   selectedHero?: Hero;
 
+  //add event binding (add functions)
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
