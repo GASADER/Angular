@@ -1,1 +1,13 @@
-<p>hero-detail works!</p>
+<!-- check if condition for rendering element ( like a shot if )  -->
+<div *ngIf="hero">
+    <!-- use Pipes for format data (like a use method in JS) -->
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div>id:{{hero.id}}</div>
+    <!-- add input two-way binding -->
+    <div>
+        <label for="hero-name">Hero name:</label>
+        <!-- use property ngModel for connect between data on input value & Initialize data in object value -->
+        <!-- like a setState on useState Hook of React -->
+        <input type="text" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+</div>

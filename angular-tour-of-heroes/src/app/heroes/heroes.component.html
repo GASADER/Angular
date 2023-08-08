@@ -14,16 +14,5 @@
     </li>
 </ul>
 
-<!-- check if condition for rendering element ( like a shot if )  -->
-<div *ngIf="selectedHero">
-    <!-- use Pipes for format data (like a use method in JS) -->
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div>id:{{selectedHero.id}}</div>
-    <!-- add input two-way binding -->
-    <div>
-        <label for="hero-name">Hero name:</label>
-        <!-- use property ngModel for connect between data on input value & Initialize data in object value -->
-        <!-- like a setState on useState Hook of React -->
-        <input type="text" [(ngModel)]="selectedHero.name" placeholder="name">
-    </div>
-</div>
+<!-- send data to value in child component key (like a sending prop in React) -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

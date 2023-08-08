@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Hero } from '../hero';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
-export class HeroDetailComponent {
 
+export class HeroDetailComponent {
+  //get decorator for hero value from parent component
+  @Input() hero? : Hero;
 }
