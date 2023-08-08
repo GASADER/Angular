@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+//import fromModule from angular library for use pipes on form elements (input two-way binding)
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

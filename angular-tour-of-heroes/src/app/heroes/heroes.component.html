@@ -1,2 +1,15 @@
 <p>heroes works!</p>
-<h2>{{hero}}</h2>
+
+<!-- add hero data from component -->
+<!-- use Pipes for format data (like a use method in JS) -->
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id:</span> {{hero.id}}</div>
+<div><span>name:</span> {{hero.name}}</div>
+
+<!-- add input two-way binding -->
+<div>
+    <label for="name">Hero name:</label>
+    <!-- use property ngModel for connect between data on input value & Initialize data in object value -->
+    <!-- like a setState on useState Hook of React -->
+    <input type="text" [(ngModel)]="hero.name" placeholder="name">
+</div>
