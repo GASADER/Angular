@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-data';
 import { HeroService } from '../hero.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { HeroService } from '../hero.service';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
 })
-export class HeroesComponent {
+export class HeroesComponent implements OnInit {
   //set new value
   heroes: Hero[] = [];
 
@@ -26,7 +25,7 @@ export class HeroesComponent {
   }
 
   //hook method for call functions
-  ngOninit(): void {
+  ngOnInit(): void {
     this.getHero();
   }
 
