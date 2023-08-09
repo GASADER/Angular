@@ -24,7 +24,7 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
 
-  //hook method for call functions
+  //hook method for call functions (use lifecycle hook like a useEffect in React)
   ngOnInit(): void {
     this.getHero();
   }
