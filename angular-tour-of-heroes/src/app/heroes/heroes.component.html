@@ -6,19 +6,10 @@
     <!-- *ngFor like a map method -->
     <!-- for loop data and create element on li scope  -->
     <li *ngFor="let hero of heroes">
-        
+
         <!-- create navigate link to detail -->
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span>{{hero.name}}
         </a>
-
-        <!-- switch class (single class binding) between onclick event -->
-        <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
-            <span class="badge">{{hero.id}}</span>
-            <span class="name">{{hero.name}}</span>
-        </button>
     </li>
 </ul>
-
-<!-- send data to value in child component key (like a sending prop in React) -->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
