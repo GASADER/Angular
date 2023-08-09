@@ -18,7 +18,7 @@ export class HeroDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-      this.getHero()
+    this.getHero();
   }
 
   getHero(): void {
@@ -26,8 +26,14 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
   }
 
-  goBack(): void{
-    this.location.back()
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
+    }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   //get decorator for hero value from parent component
