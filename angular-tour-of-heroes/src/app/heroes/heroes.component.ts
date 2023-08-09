@@ -11,10 +11,6 @@ export class HeroesComponent implements OnInit {
   //set new value
   heroes: Hero[] = [];
 
-  //set empty object for instead of selected value
-  //Initialize = undefined
-  selectedHero?: Hero;
-
   //create parameter for HeroService instance
   constructor(private heroService: HeroService,private messageService: MessageService) {}
 
@@ -31,7 +27,6 @@ export class HeroesComponent implements OnInit {
   
   //add event binding (add functions)
   onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HerosesComponent: Selected hero id=${hero.id}`)
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
   }
 }
